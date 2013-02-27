@@ -3,6 +3,8 @@ crypto.py
 
 A collection of pure Python crypto implementations. All modules are standalone. Available in Python 2 and Python 3 flavors!
 
+![Travis status](https://secure.travis-ci.org/FiloSottile/crypto.py.png)
+
 ### Implementation details
 
 This code is slow. Obviously it is meant for educational purposes, if you need performance or simply go in production you should use standard library or OpenSSL.
