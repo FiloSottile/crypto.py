@@ -24,7 +24,7 @@ import binascii
 lrot = lambda x, n: (x << n) | (x >> (32 - n))
 
 
-class MD4:
+class MD4():
 
     A, B, C, D = (0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476)
     buf = [0x00] * 64
