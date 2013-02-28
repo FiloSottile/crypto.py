@@ -29,3 +29,10 @@ class Python3Tests(unittest.TestCase):
         for n in range(500):
             self.assertEqual(hashlib.sha1(stuff[:n]).hexdigest(),
                 sha1.SHA1(stuff[:n]).hexdigest())
+
+    def test_md5(self):
+        import md5
+        stuff = RAND_pseudo_bytes(500)[0]
+        for n in range(500):
+            self.assertEqual(hashlib.md5(stuff[:n]).hexdigest(),
+                md5.MD5(stuff[:n]).hexdigest())
