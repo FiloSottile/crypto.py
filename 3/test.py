@@ -36,3 +36,31 @@ class Python3Tests(unittest.TestCase):
         for n in range(500):
             self.assertEqual(hashlib.md5(stuff[:n]).hexdigest(),
                 md5.MD5(stuff[:n]).hexdigest())
+
+    def test_sha2_256(self):
+        import sha2
+        stuff = RAND_pseudo_bytes(500)[0]
+        for n in range(500):
+            self.assertEqual(hashlib.sha256(stuff[:n]).hexdigest(),
+                sha2.SHA2_256(stuff[:n]).hexdigest())
+
+    def test_sha2_224(self):
+        import sha2
+        stuff = RAND_pseudo_bytes(500)[0]
+        for n in range(500):
+            self.assertEqual(hashlib.sha224(stuff[:n]).hexdigest(),
+                sha2.SHA2_224(stuff[:n]).hexdigest())
+
+    def test_sha2_512(self):
+        import sha2
+        stuff = RAND_pseudo_bytes(500)[0]
+        for n in range(500):
+            self.assertEqual(hashlib.sha224(stuff[:n]).hexdigest(),
+                sha2.SHA2_224(stuff[:n]).hexdigest())
+
+    def test_sha2_384(self):
+        import sha2
+        stuff = RAND_pseudo_bytes(500)[0]
+        for n in range(500):
+            self.assertEqual(hashlib.sha224(stuff[:n]).hexdigest(),
+                sha2.SHA2_224(stuff[:n]).hexdigest())
